@@ -2,6 +2,10 @@
 
 @main("Welcome to Play") {
 
-    @welcome(message, style = "scala")
+    @message
 
 }
+@()==(implicit flash: Flash)
+
+    flash.get("success").getOrElse("Flash not found")
+
